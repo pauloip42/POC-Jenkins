@@ -1,0 +1,6 @@
+version: '3.8'
+
+services:
+  something:
+    container_name: something
+    build: '.'
