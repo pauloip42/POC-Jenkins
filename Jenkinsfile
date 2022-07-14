@@ -1,10 +1,30 @@
 pipeline {
-    agent { docker { image 'node:16.13.1-alpine' } }
-    stages {
-        stage('build') {
-            steps {
-                sh 'node --version'
-            }
-        }
-    }
+	agent any
+	stages {
+		stage("unit testing") {
+			steps {
+				sh '''
+					npm i
+					npm test
+				'''
+			}
+		}
+		stage("verify tooling") {
+			steps {
+				sh '''
+					docker version
+					docker info
+					docker compose version
+				'''
+			}
+		}
+		stage("build") {
+			steps {
+				sh '''
+					docker-compose up --build --force-recreate -d
+					docker ps
+				'''
+			}
+		}
+	}
 }
