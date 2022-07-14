@@ -2,5 +2,5 @@ version: '3.8'
 
 services:
   something:
-    container_name: something
+    container_name: something-1
     build: '.'
