@@ -1,0 +1,23 @@
+{
+  "name": "jenkins-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pauloip42/POC-Jenkins.git"
+  },
+  "author": "Paulo Lopes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pauloip42/POC-Jenkins/issues"
+  },
+  "homepage": "https://github.com/pauloip42/POC-Jenkins#readme",
+  "dependencies": {
+    "jest": "^28.1.3"
+  }
+}
